@@ -1,0 +1,40 @@
+@import './src/assets/style/variables';
+
+.navbar-bottom {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+
+  .nav-item {
+    display: flex;
+    margin-bottom: 0;
+
+    .nav-link {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: $primary;
+      position: relative;
+      line-height: 24px !important;
+      font-family: 'Cinzel', Roboto, "Helvetica Neue", sans-serif !important;
+      font-weight: bolder;
+
+      &:hover,
+      &:focus {
+        background-color: white !important;
+      }
+
+      &.active {
+        color: $secondary;
+      }
+
+      .mat-icon {
+        position: absolute;
+        color: $secondary;
+        vertical-align: bottom;
+
+        bottom: -15px;
+        left: calc(50% - 12px);
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import './src/assets/style/variables';
+
+.header-container {
+  padding: 5px 35px;
+  display: flex;
+  background-color: #fff;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+
+  .brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .navigation {
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-items: flex-end;
+    flex-direction: row;
+
+    .top-bar {
+      display: none;
+    }
+
+    .bottom-bar {
+      display: none;
+    }
+  }
+
+  .burger {
+    position: absolute;
+    top: 45px;
+    right: 5px;
+  }
+}
+
+@media screen and (min-width: $tablet-screen-max-width + 1) {
+  .header-container .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .brand {
+      padding-bottom: 0;
+    }
+    .top-bar {
+      height: 56px;
+      display: flex;
+    }
+
+    .bottom-bar {
+      display: flex;
+    }
+  }
+}
+
+@media(min-width: $large-screen-min-width) {
+  .navigation {
+    flex-direction: column;
+    width: 1050px;
+  }
+}

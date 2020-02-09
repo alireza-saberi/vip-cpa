@@ -1,0 +1,133 @@
+@import './src/assets/style/variables';
+
+.about-us-container {
+  padding-top: 90px;
+  .about-us-banner {
+    position: relative;
+    figure {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0, 0.1);
+    }
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 5px solid rgba(247,166,27, 0.3);
+      display: inline-block;
+      font-family: Roboto,sans-serif;
+      font-size: 4rem;
+      font-weight: 300;
+      line-height: 1;
+      margin: 0 0;
+      padding: 0;
+      color: #fff;
+      text-transform: uppercase;
+      h2 {
+        font-size: 20px;
+        margin: 15px 25px;
+      }
+    }
+  }
+  .who-are-we {
+    padding-top: 6% !important;
+    padding-bottom: 6% !important;
+    background-image: url(../../../assets/images/about-us-background.jpg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 35px;
+    margin-top: -15px;
+
+    .text {
+      flex-basis: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        margin-top: 0 !important;
+        margin-bottom: 40px !important;
+        border-bottom-width: 5px !important;
+        border-left-width: 5px !important;
+        padding-top: 5px !important;
+        padding-bottom: 18px !important;
+        padding-left: 18px !important;
+        border-left-color: #f8f8f8 !important;
+        border-left-style: solid !important;
+        border-bottom-color: #f8f8f8 !important;
+        border-bottom-style: solid !important
+      }
+      p {
+        text-align: justify;
+        .first-character {
+          float: left;
+          font-family: Georgia;
+          font-size: 75px;
+          line-height: 60px;
+          padding-top: 0;
+          padding-right: 8px;
+          padding-left: 0;
+        }
+      }
+    }
+
+    .image-wrapper {
+      display: none;
+      img {
+        width: 300px;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mobile-screen-max-width + 1) {
+  .about-us-container {
+    .who-are-we {
+      .text {
+        flex-basis: 50%;
+      }
+      .image-wrapper {
+        display: none;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: $tablet-screen-max-width + 1){
+  .about-us-container {
+    padding-top: 105px;
+    .about-us-banner {
+      .overlay-content {
+        font-size: 2rem;
+        margin: 0 0 25px;
+        padding: 20px 6rem;
+      }
+    }
+
+    .who-are-we {
+      .text {
+        flex-basis: 30%;
+      }
+
+      .image-wrapper {
+        display: block;
+      }
+    }
+  }
+}

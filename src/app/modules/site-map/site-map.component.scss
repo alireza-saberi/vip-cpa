@@ -1,0 +1,21 @@
+@import './src/assets/style/variables';
+
+.site-map-container {
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+
+  .site-map-bg {
+    background: lavenderblush;
+    flex-basis: 50%;
+    border-radius: 15px;
+    margin-top: 35px;
+    margin-bottom: 250px;
+  }
+}
+
+@media screen and (min-width: $tablet-screen-max-width + 1){
+  .site-map-container {
+    padding-top: 105px;
+  }
+}

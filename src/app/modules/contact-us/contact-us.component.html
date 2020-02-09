@@ -1,0 +1,76 @@
+<main class="contact-us-container" role="main">
+  <section
+    tabindex="0"
+    class="contact-us-banner">
+    <figure>
+      <img src="../../assets/images/vip-cpa-contact-us-banner1.jpg" alt="VIP CPA contact us banner">
+    </figure>
+    <div class="overlay"></div>
+    <header class="overlay-content">
+      <h2>
+        {{ 'CONTACT_US' | translate }}
+      </h2>
+    </header>
+  </section>
+  <section class="map" tabindex="0">
+    <agm-map tabindex="-1"
+      [zoom]="16"
+      [scrollwheel]="false"
+      [latitude]="lat"
+      [longitude]="lng">
+      <agm-marker [latitude]="lat" [longitude]="lng">
+      </agm-marker>
+    </agm-map>
+  </section>
+
+  <section class="contact-us" tabindex="0">
+    <header class="title">
+      <h2>
+        <span class="highlight">
+          {{ 'GET_IN_TOUCH2' | translate}}
+        </span>
+      </h2>
+    </header>
+    <div class="contact-methods">
+      <div class="method-1">
+        <div class="icon-container">
+          <mat-icon>home</mat-icon>
+        </div>
+        <h4>
+          {{ 'OFFICE_ADDRESS' | translate }}
+        </h4>
+        <address>
+          <a class="nav-link" [href]="vipAddress" target="_blank">
+            1410 Rue Stanley #405, Montréal, QC H3A 1P8
+          </a>
+        </address>
+      </div>
+
+      <div class="method-2">
+        <div class="icon-container">
+          <mat-icon>mail</mat-icon>
+        </div>
+        <h4>
+          {{ 'MAILS' | translate }}
+        </h4>
+        <div class="mails">
+          <a href="mailto:taxfiling@gmail.com">taxfiling@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="method-3">
+        <div class="icon-container">
+          <mat-icon>phone</mat-icon>
+        </div>
+        <h4>
+          {{ 'CONTACT_NUMBERS' | translate }}
+        </h4>
+        <div class="phones">
+          <a href="tel:(514)227-8000">T: (514)227-8000</a>
+          <a href="tel:(514)227-4000">F: (514)227-4000</a>
+          <a href="tel:(514)803-2030">T: (514)803-2030</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,21 @@
+<a tabindex="0"
+  [ngClass]="{'normal' : condNormal, 'rainbow': condRainbow}"
+     (mouseout) = "mouseOut($event)"
+     (mouseover)=" mouseOver($event)">
+  <div aria-hidden="true"
+    class="icon">
+    <a [routerLink]="route" tabindex="-1">
+      <img
+        [ngClass]="{'filter': !iconColor }"
+        [src]="imgSrc">
+    </a>
+  </div>
+  <ng-content></ng-content>
+  <div *ngIf="more" class="more">
+    <a tabindex="-1"
+      [ngClass]="{'hover': iconColor }"
+      [routerLink]="route">
+      LEARN MORE <mat-icon>more_horiz</mat-icon>
+    </a>
+  </div>
+</a>

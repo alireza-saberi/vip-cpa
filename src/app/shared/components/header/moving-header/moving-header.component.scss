@@ -1,0 +1,75 @@
+@import './src/assets/style/variables';
+
+.navbar-top {
+  display: none;
+  list-style: none;
+  margin-bottom: 0;
+
+  .nav-item {
+    display: flex;
+    margin-bottom: 0;
+
+    &.email {
+      display: none;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: $primary;
+
+      .mat-icon {
+        color: $primary;
+        vertical-align: bottom;
+      }
+
+      &:hover {
+        color: $secondary;
+
+        >.mat-icon{
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-screen-max-width + 1) {
+  .navbar-top {
+    display: flex;
+    .nav-item {
+      font-size: 12px;
+
+      &.email {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $large-screen-min-width){
+  .navbar-top {
+    .nav-item {
+      &.email {
+        display: flex;
+        .in-touch {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $extra-large-screen-min-width){
+  .navbar-top {
+    .nav-item {
+      &.email {
+        display: flex;
+        .in-touch {
+          display: flex;
+          padding-top: 13px;
+        }
+      }
+    }
+  }
+}

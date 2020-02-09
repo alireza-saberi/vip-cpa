@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./variables";
+@import "./mixins";
+@import '~material-design-icons/iconfont/material-icons.css';
+$fa-font-path: "../../../node_modules/font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
+// import whatever you need from bootstrap, not all of it
+//@import
+//'functions',
+//'variables',
+//'mixins',
+//'print',
+//'reboot',
+//'type';
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: 'Cinzel', Roboto, "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    //font-family: 'Cinzel Decorative', cursive;
+    background-color: rgba(247,166,27, 0.7);
+    color: #777777;
+
+  p {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-weight: normal;
+  }
+
+     &.container-fluid{
+         padding: 0;
+     }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: rgba(247,166,27,0.5);
+  color: $primary;
+}
+
+::selection {
+  background: rgba(247,166,27,0.5);
+  color: $primary;
+}

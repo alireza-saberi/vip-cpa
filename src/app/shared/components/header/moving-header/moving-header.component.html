@@ -1,0 +1,29 @@
+<ul class="navbar-top" @boundInRight>
+  <li class="nav-item email">
+    <p class="nav-link in-touch">
+      {{ 'GET_IN_TOUCH' | translate }}
+    </p>
+    <a class="nav-link"
+       href="mailto:letsdoit@vipcpa.com">
+      <mat-icon>email</mat-icon>
+      letsdoit@vipcpa.com
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"
+       href="tel:(514)227-8000">
+      <mat-icon>local_phone</mat-icon>
+      (514)227-8000
+    </a>
+  </li>
+  <li class="nav-item">
+    <address>
+      <a class="nav-link"
+         [href]="vipAddress"
+         target="_blank">
+        <mat-icon>room</mat-icon>
+         1410 Rue Stanley #405, Montréal, QC H3A 1P8
+      </a>
+    </address>
+  </li>
+</ul>

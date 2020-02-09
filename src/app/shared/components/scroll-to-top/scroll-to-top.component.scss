@@ -1,0 +1,31 @@
+@import './src/assets/style/variables';
+
+.scroll-to-top {
+    background: none repeat scroll #222;
+    opacity: 0;
+    border: 1px solid #333;
+    border-radius: 2px;
+    bottom: 21px;
+    cursor: pointer;
+    padding: 8px 15px;
+    position: fixed;
+    right: 20px;
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}
+.show-scrollTop {
+  opacity: .8;
+  transition: all .2s ease-in-out;
+
+  mat-icon {
+    color: $secondary;
+    font-weight: bold;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

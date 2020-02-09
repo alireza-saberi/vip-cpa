@@ -1,0 +1,173 @@
+<main class="home-container" role="main">
+  <div  class="swiper-container"
+        [swiper]="config"
+        [index]="slideIndex"
+        aria-label="a carousel for testimonials"
+        role="slider">
+    <div class="swiper-button-prev"
+         role="button"
+         aria-label="previous slide">
+    </div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="business-intro">
+          <h1 @boundInUp>
+            {{ 'SLOGAN_1'| translate }}
+          </h1>
+          <h2 @fadeIn>
+            {{ 'SLOGAN_2'| translate }}
+            <br>
+            {{ 'IN'| translate }}
+            <span class="attention">
+              {{ 'SLOGAN_3'| translate }}
+            </span>.
+          </h2>
+        </div>
+        <img src="../../assets/images/vip-cpa-slider-1.jpg" alt="vip cpa slogan background slider image">
+        <!--        <blockquote class="blockquote p-5 rounded">-->
+<!--          <div class="blockquote-custom-icon bg-info shadow-sm" aria-hidden="true"><mat-icon>format_quote</mat-icon></div>-->
+<!--          <p class="mb-0 mt-2 font-italic">-->
+<!--            "Fantastic service by people who care. I had a good experience and recommend them."-->
+<!--            <a [href]="googleReview" tabindex="-1" target="_blank" class="text-info">@Google Reviews</a>-->
+<!--          </p>-->
+<!--          <footer class="blockquote-footer pt-4 mt-4 border-top">-->
+<!--            Michelle-->
+<!--            <cite title="Source Title">self-employed</cite>-->
+<!--          </footer>-->
+<!--        </blockquote>-->
+      </div>
+      <div class="swiper-slide">
+        <blockquote class="blockquote p-5 rounded">
+          <div class="blockquote-custom-icon bg-info shadow-sm"
+               aria-hidden="true">
+            <mat-icon>format_quote</mat-icon>
+          </div>
+          <p class="mb-0 mt-2 font-italic">
+            "Fantastic service by people who care. I had a good experience and recommend them."
+            <a [href]="googleReview"
+               tabindex="-1"
+               target="_blank"
+               class="text-info">
+              @Google Reviews
+            </a>
+          </p>
+          <footer class="blockquote-footer pt-4 mt-4 border-top">
+            Michelle
+            <cite title="Source Title">
+              self-employed
+            </cite>
+          </footer>
+        </blockquote>
+        <img src="../../assets/images/vip-cpa-slider-2.jpg" alt="vip cpa testimonial background slider image">
+      </div>
+      <div class="swiper-slide">
+        <blockquote class="blockquote p-5 rounded">
+          <div class="blockquote-custom-icon bg-info shadow-sm"
+               aria-hidden="true">
+            <mat-icon>format_quote</mat-icon>
+          </div>
+          <p class="mb-0 mt-2 font-italic">
+            Extremely professional and knowledgeable. Fair price and quick service."
+            <a [href]="googleReview"
+               tabindex="-1"
+               target="_blank"
+               class="text-info">
+              @Google Reviews
+            </a>
+          </p>
+          <footer class="blockquote-footer pt-4 mt-4 border-top">
+            Ali
+            <cite title="Source Title">
+              Small business owner
+            </cite>
+          </footer>
+        </blockquote>
+        <!--        </blockquote>-->
+        <img src="../../assets/images/vip-cpa-slider-3.jpg" alt="VIP CPA testimonial background slider image">
+        <!--        <blockquote class="blockquote p-5 rounded">-->
+<!--          <div class="blockquote-custom-icon bg-info shadow-sm" aria-hidden="true"><mat-icon>format_quote</mat-icon></div>-->
+<!--          <p class="mb-0 mt-2 font-italic">-->
+<!--            "For the past eight years, I've relied on Hasan, my accountant at VIP CPA, to file my income taxes as-->
+<!--            well as for advice and guidance on financial and investment matters. Not only is he highly competent-->
+<!--            and informed in his field, he is a decent human being. He has always taken the time (usually from a very-->
+<!--            busy office) to explain complex matters and offer trustworthy, effective advice. Would recommend him and-->
+<!--            all the excellent staff, without reservation."-->
+<!--            <a [href]="googleReview" tabindex="-1" target="_blank" class="text-info">@Google Reviews</a>-->
+<!--          </p>-->
+<!--          <footer class="blockquote-footer pt-4 mt-4 border-top">-->
+<!--            Lee-->
+<!--            <cite title="Source Title">investor and business owner</cite>-->
+<!--          </footer>-->
+      </div>
+    </div>
+    <div class="swiper-button-next" role="button" aria-label="next slide">
+    </div>
+<!--    <div class="swiper-pagination"></div>-->
+  </div>
+
+  <section class="core-business"
+           tabindex="0"
+           aria-label="about vip cpa">
+    <p>
+      <span class="firstcharacter">L</span>
+      ocated directly in the heart of the city, VIP CPA offers <strong>top-notch tax and accounting services</strong>
+      for businesses and individuals. We believe accounting goes far beyond numbers. We proudly provide our customers
+      with <strong>prompt response time</strong>, true <strong>attention to detail</strong>,
+      and <strong>expertise</strong> that <strong>maximizes tax benefits</strong>.
+    </p>
+  </section>
+
+  <section class="our-services" aria-label="vip cpa services">
+    <div class="title">
+      <h2>
+        <span class="highlight">
+          {{ 'OUR_SERVICES' | translate }}
+        </span>
+      </h2>
+    </div>
+    <div class="our-services-container">
+    <div class="service"
+         (keyup.enter)="routTo('/our-services/personal-tax')"
+         (click)="routTo('/our-services/personal-tax')">
+      <app-bang [route]="'/our-services/personal-tax'"
+                [img-src]="'../../assets/icons/vip-cpa-personal-tax.svg'">
+        <h3>Personal Taxes</h3>
+        <ul>
+          <li>Individual & Family</li>
+          <li>Professionals</li>
+          <li>Self Employed</li>
+          <li>Special Cases</li>
+        </ul>
+      </app-bang>
+    </div>
+    <div class="service"
+         (keyup.enter)="routTo('/our-services/corporate-tax')"
+         (click)="routTo('/our-services/corporate-tax')">
+      <app-bang [route]="'/our-services/corporate-tax'"
+        [img-src]="'../../assets/icons/vip-cpa-corporate-tax.svg'"
+        [more]="true">
+        <h3>Corporate Taxes</h3>
+        <p>
+          WE GOT YOU COVERED with payroll, taxes, HR compliance and accurate financial reports to provide
+          to members, banks, investors or others
+        </p>
+      </app-bang>
+    </div>
+    <div class="service"
+         (keyup.enter)="routTo('/our-services/bookkeeping')"
+         (click)="routTo('/our-services/bookkeeping')">
+      <app-bang [route]="'/our-services/bookkeeping'"
+                [img-src]="'../../assets/icons/vip-cpa-bookkeeping.svg'">
+        <h3>Bookkeeping</h3>
+        <ul>
+          <li>General Statements</li>
+          <li>Govt. Reporting</li>
+          <li>Consulting & Planning</li>
+          <li>Payroll Services</li>
+        </ul>
+      </app-bang>
+    </div>
+    </div>
+  </section>
+</main>
+

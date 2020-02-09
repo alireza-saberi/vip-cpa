@@ -1,0 +1,21 @@
+<aside class="side-navigator">
+  <h3 (click)="closeSideNav($event)">Menu</h3>
+  <ul>
+    <li class="item">
+      <a routerLink="home" (click)="closeSideNavHome($event)">Home</a>
+    </li>
+    <li class="item">
+      <a routerLink="our-services" (click)="closeSideNavService($event)">Services</a>
+    </li>
+    <li class="item">
+      <a routerLink="about-us" (click)="closeSideNavContact($event)">
+        About Us
+      </a>
+    </li>
+    <li class="item">
+      <a routerLink="contact-us" (click)="closeSideNavContact($event)">
+        Contact Us
+      </a>
+    </li>
+  </ul>
+</aside>

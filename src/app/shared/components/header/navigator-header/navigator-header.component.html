@@ -1,0 +1,54 @@
+<ul class="navbar-bottom"
+    role="menubar"
+    aria-label="Main Navigation">
+  <li class="nav-item"
+      role="none">
+    <a class="nav-link"
+       role="menuitem"
+       routerLink="/home"
+       [routerLinkActive]="['active']">
+      {{ 'HOME' | translate }}
+      <mat-icon *ngIf="isHome" @hovering>arrow_drop_up</mat-icon>
+    </a>
+  </li>
+  <li class="nav-item" role="none">
+    <a class="nav-link"
+       mat-button [matMenuTriggerFor]="services"
+       (keyup.enter)="openMenu($event)"
+       role="menuitem"
+       aria-haspopup="true"
+       aria-expanded="false">
+      {{ 'SERVICES' | translate }}
+      <mat-icon *ngIf="isService" @hovering>arrow_drop_up</mat-icon>
+    </a>
+    <mat-menu #services="matMenu">
+      <button mat-menu-item
+              [routerLinkActive]="['active']"
+              routerLink="/our-services/personal-tax">Personal Tax</button>
+      <button mat-menu-item
+              [routerLinkActive]="['active']"
+              routerLink="/our-services/corporate-tax">Corporate Tax</button>
+      <button mat-menu-item
+              [routerLinkActive]="['active']"
+              routerLink="/our-services/bookkeeping">Bookkeping</button>
+    </mat-menu>
+  </li>
+  <li class="nav-item" role="none">
+    <a class="nav-link"
+       role="menuitem"
+       routerLink="/about-us"
+       [routerLinkActive]="['active']">
+      {{ 'ABOUT_US' | translate }}
+      <mat-icon *ngIf="isAboutus" @hovering>arrow_drop_up</mat-icon>
+    </a>
+  </li>
+  <li class="nav-item" role="none">
+    <a class="nav-link"
+       role="menuitem"
+       routerLink="/contact-us"
+       [routerLinkActive]="['active']">
+      {{ 'CONTACT_US' | translate }}
+      <mat-icon *ngIf="isContact" @hovering>arrow_drop_up</mat-icon>
+    </a>
+  </li>
+</ul>

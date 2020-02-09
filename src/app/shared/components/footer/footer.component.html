@@ -1,0 +1,110 @@
+<footer role="contentinfo">
+  <article class="social-media">
+    <header class="social-media-title">
+      {{ 'FOLLOW_US' | translate }}:
+    </header>
+    <section>
+      <a href="" target="_blank">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a href="" target="_blank">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a href="" target="_blank">
+        <i class="fa fa-medium" aria-hidden="true"></i>
+      </a>
+      <a href="" target="_blank">
+        <i class="fa fa-yelp"aria-hidden="true"></i>
+      </a>
+      <a href="" target="_blank">
+        <i class="fa fa-foursquare" aria-hidden="true"></i>
+      </a>
+    </section>
+  </article>
+  <article class="bottom-widget" role="complementary">
+            <section class="widget-text">
+              <a [href]="cpaCanadaDomain"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <img src="./assets/images/cpa-chartered-professional-accountant.png"
+                     alt="cpa chartered professional accountant logo">
+              </a>
+            </section>
+  </article>
+  <article class="bottom-navigation"
+           aria-label="Secondary Navigation">
+    <ul class="navbar-bottom"
+        role="menubar">
+      <li class="nav-item"
+          role="none" >
+        <a class="nav-link"
+           role="menuitem"
+           aria-haspopup="true"
+           aria-expanded="false"
+           routerLink="/privacy-policy"
+           [routerLinkActive]="['active']">
+          {{ 'PRIVACY_POLICY' | translate }}
+        </a>
+      </li>
+      <li class="nav-item"
+          role="none">
+        <a class="nav-link"
+           role="menuitem"
+           aria-haspopup="true"
+           aria-expanded="false"
+           routerLink="/terms-and-conditions"
+           [routerLinkActive]="['active']">
+          {{ 'TERMS' | translate }}
+        </a>
+      </li>
+      <li class="nav-item"
+          role="none">
+        <a class="nav-link"
+           role="menuitem"
+           routerLink="/site-map"
+           [routerLinkActive]="['active']">
+          {{ 'SITEMAP' | translate }}
+        </a>
+      </li>
+      <li class="nav-item"
+          role="none">
+        <a class="nav-link"
+           role="menuitem"
+           routerLink="/contact-us"
+           [routerLinkActive]="['active']">
+          {{ 'CONTACT_US' | translate }}
+        </a>
+      </li>
+    </ul>
+  </article>
+  <article class="copy-right">
+    {{ 'COPY_RIGHT' | translate }}
+    &copy; {{ year }} VIP CPA.
+    {{ 'ALL_RIGHT' | translate }}
+  </article>
+  <article class="languages">
+    <a tabindex="0"
+      (keyup.enter)="useLanguage('en')"
+      (click)="useLanguage('en')">
+      <span class="flag-icon flag-icon-us"
+            aria-hidden="true"></span>
+      {{ 'en' | translate }}
+       |
+    </a>
+    <a tabindex="0"
+       (keyup.enter)="useLanguage('fr')"
+      (click)="useLanguage('fr')">
+      <span class="flag-icon flag-icon-fr"
+            aria-hidden="true"></span>
+      {{ 'fr' | translate }}
+      |
+    </a>
+    <a tabindex="0"
+       (keyup.enter)="useLanguage('zh')"
+      (click)="useLanguage('zh')"
+       aria-hidden="true">
+      <span class="flag-icon flag-icon-cn"></span>
+      {{ 'zh' | translate }}
+    </a>
+  </article>
+</footer>

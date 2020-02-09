@@ -1,0 +1,19 @@
+<header class="header-container" role="banner">
+  <section class="brand" role="logo">
+    <a routerLink="home">
+      <img src="./assets/images/vip-cpa-logo.png" height="70px"
+           alt="VIP CPA logo image">
+    </a>
+  </section>
+  <nav class="navigation" role="navigation">
+    <section class="top-bar" role="banner" aria-label="contact information">
+      <app-moving-header></app-moving-header>
+    </section>
+    <section class="bottom-bar" aria-label="main tabs">
+      <app-navigator-header></app-navigator-header>
+    </section>
+  </nav>
+  <section class="burger" aria-label="Open the menu">
+    <app-hamburger (click)="openSideNav($event)"></app-hamburger>
+  </section>
+</header>

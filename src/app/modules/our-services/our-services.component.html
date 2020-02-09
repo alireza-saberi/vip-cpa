@@ -1,0 +1,65 @@
+<main class="our-service-container" role="main">
+
+  <section class="our-service-banner" >
+    <figure>
+      <img src="../../assets/images/vip-cpa-contact-us-banner1.jpg" alt="VIP CPA our services banner">
+    </figure>
+    <div class="overlay"></div>
+    <header class="overlay-content">
+      <h2>
+        {{ 'OUR_SERVICES' | translate }}
+      </h2>
+    </header>
+  </section>
+
+  <section class="our-services">
+    <div class="our-services-container">
+      <div class="service"
+           (keyup.enter)="routTo('/our-services/personal-tax')"
+           (click)="routTo('/our-services/personal-tax')">
+        <app-bang [route]="'/our-services/personal-tax'"
+                  [img-src]="'../../assets/icons/vip-cpa-personal-tax.svg'">
+          <h3>Personal Taxes</h3>
+          <ul>
+            <li>Individual & Family</li>
+            <li>Professionals</li>
+            <li>Self Employed</li>
+            <li>Special Cases</li>
+          </ul>
+        </app-bang>
+      </div>
+
+      <div class="service"
+           (keyup.enter)="routTo('/our-services/corporate-tax')"
+           (click)="routTo('/our-services/corporate-tax')">
+        <app-bang [route]="'/our-services/corporate-tax'"
+                  [img-src]="'../../assets/icons/vip-cpa-corporate-tax.svg'">
+          <h3>Corporate Taxes</h3>
+          <ul>
+            <li>Buisness Taxes</li>
+            <li>Sales Taxes</li>
+            <li>Financial Statements</li>
+            <li>Tax Planning</li>
+          </ul>
+        </app-bang>
+      </div>
+
+      <div class="service"
+           (keyup.enter)="routTo('/our-services/bookkeeping')"
+           (click)="routTo('/our-services/bookkeeping')">
+        <app-bang [route]="'/our-services/bookkeeping'"
+                  [img-src]="'../../assets/icons/vip-cpa-bookkeeping.svg'">
+          <h3>Bookkeeping</h3>
+          <ul>
+            <li>General Statements</li>
+            <li>Govt. Reporting</li>
+            <li>Consulting & Planning</li>
+            <li>Payroll Services</li>
+          </ul>
+        </app-bang>
+      </div>
+    </div>
+  </section>
+
+  <router-outlet></router-outlet>
+</main>

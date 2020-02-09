@@ -1,0 +1,116 @@
+@import './src/assets/style/variables';
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: white;
+  color: $primary;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  //margin-top: 2em;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  .social-media {
+    overflow: hidden;
+    line-height: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //font-family: 'Cinzel', Roboto, "Helvetica Neue", sans-serif;
+
+    .social-media-title {
+      //margin: 0 20px 0 0;
+      margin: 0;
+    }
+
+    a {
+      border: 3px solid $primary;
+      color: $primary;
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      line-height: 38px;
+      margin: 0 20px 0 0;
+    }
+  }
+
+  .copy-right {
+    //margin-top: 2em;
+    //padding-top: 35px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bottom-widget {
+    //margin-top: 2em;
+    text-align: center;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5em;
+
+      .widget-text {
+        img {
+          width: 200px;
+          height: auto;
+        }
+      }
+  }
+
+  .bottom-navigation {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin-bottom: 0;
+      padding: 0;
+
+      .nav-item {
+        display: flex;
+        margin-bottom: 0;
+
+        .nav-link {
+          display: block;
+          padding: 0.5rem 0.5rem;
+          color: $primary;
+
+          &.active {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+  .languages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5px;
+
+    a {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mobile-screen-max-width+1) {
+  footer {
+    .social-media {
+      flex-direction: row;
+
+      .social-media-title {
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}
