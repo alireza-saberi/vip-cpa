@@ -1,13 +1,14 @@
 @import '../../../../../assets/style/variables';
 
 .side-navigator {
-  position: absolute;
+  position: fixed;
   right: 0;
   height:100vmax;
   width: 50%;
   background-color: rgba(0,0,0,0.75);
   z-index: 200;
   padding: 40px 15px;
+  transition: all 2s;
 
   h3 {
     color: $secondary;

@@ -2,19 +2,39 @@
   <h3 (click)="closeSideNav($event)">Menu</h3>
   <ul>
     <li class="item">
-      <a routerLink="home" (click)="closeSideNavHome($event)">Home</a>
+      <a routerLink="/home" (click)="closeSideNavHome($event)">
+        {{ 'HOME'| translate }}</a>
     </li>
     <li class="item">
-      <a routerLink="our-services" (click)="closeSideNavService($event)">Services</a>
+      <a routerLink="/our-services" (click)="closeSideNavService($event)">
+        {{ 'SERVICES'| translate }}
+      </a>
+      <ul>
+        <li class="item">
+          <a routerLink="/our-services/personal-tax" (click)="closeSideNavService($event)">
+            &nbsp;  Personal Tax
+          </a>
+        </li>
+        <li class="item">
+          <a routerLink="/our-services/corporate-tax" (click)="closeSideNavService($event)">
+          &nbsp; Corporate Tax
+          </a>
+        </li>
+        <li class="item">
+          <a routerLink="/our-services/bookkeeping" (click)="closeSideNavService($event)">
+          &nbsp; Bookkeeping
+          </a>
+        </li>
+      </ul>
     </li>
     <li class="item">
-      <a routerLink="about-us" (click)="closeSideNavContact($event)">
-        About Us
+      <a routerLink="/about-us" (click)="closeSideNavContact($event)">
+        {{ 'ABOUT_US' | translate }}
       </a>
     </li>
     <li class="item">
-      <a routerLink="contact-us" (click)="closeSideNavContact($event)">
-        Contact Us
+      <a routerLink="/contact-us" (click)="closeSideNavContact($event)">
+        {{ 'CONTACT_US' | translate }}
       </a>
     </li>
   </ul>

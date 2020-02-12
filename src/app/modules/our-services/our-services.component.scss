@@ -25,7 +25,7 @@
       border: 5px solid rgba(247,166,27, 0.3);
       display: inline-block;
       font-family: Roboto,sans-serif;
-      font-size: 4rem;
+      font-size: 16px;
       font-weight: 300;
       line-height: 1;
       margin: 0 0;
@@ -33,7 +33,7 @@
       color: #fff;
       text-transform: uppercase;
       h2 {
-        font-size: 20px;
+        font-size: 16px;
         margin: 15px 25px;
       }
     }
@@ -62,13 +62,13 @@
   }
 }
 
-@media screen and (min-width: $mobile-screen-max-width + 1){
+@media screen and (min-width: $tablet-screen-max-width + 1){
   .our-service-container {
     padding-top: 105px;
 
     .our-service-banner {
       .overlay-content {
-        font-size: 2rem;
+        //font-size: 16px;
         margin: 0 0 25px;
         padding: 20px 6rem;
       }
