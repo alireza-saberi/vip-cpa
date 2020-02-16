@@ -33,6 +33,7 @@ import {ServiceFourComponent} from './modules/our-services/service-four/service-
 import {ServiceFiveComponent} from './modules/our-services/service-five/service-five.component';
 import {APIKeys} from './configs/keys';
 import {AngularFireAnalyticsModule} from '@angular/fire/analytics';
+import {RebrandingComponent} from './modules/rebranding/rebranding.component';
 
 const routesArrayOfObject: Routes = [
   {
@@ -88,6 +89,10 @@ const routesArrayOfObject: Routes = [
   {
     path: 'site-map',
     component: SiteMapComponent
+  },
+  {
+    path: 'ats-consulting',
+    component: RebrandingComponent
   },
   {
     path: '**',

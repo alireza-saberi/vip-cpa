@@ -21,6 +21,7 @@ import {RouterModule} from '@angular/router';
 import {TranslateModule} from '@ngx-translate/core';
 import { ServiceFourComponent } from './our-services/service-four/service-four.component';
 import { ServiceFiveComponent } from './our-services/service-five/service-five.component';
+import { RebrandingComponent } from './rebranding/rebranding.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -46,6 +47,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ServiceThreeComponent,
     ServiceFourComponent,
     ServiceFiveComponent,
+    RebrandingComponent,
   ],
   imports: [
     CommonModule,
