@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {AngularFireAnalytics} from '@angular/fire/analytics';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-footer',
@@ -10,7 +12,9 @@ export class FooterComponent implements OnInit {
   year: number;
   cpaCanadaDomain = 'https://www.cpacanada.ca/';
 
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService,
+              private analytics: AngularFireAnalytics
+  ) { }
 
   ngOnInit() {
     const date = new Date();
@@ -19,6 +23,10 @@ export class FooterComponent implements OnInit {
 
   useLanguage(language: string) {
     this.translate.use(language);
+    this.analytics.logEvent('UPDATING_LANG_TO' + language.toUpperCase() + '_event');
   }
 
+  goToSocial(social: string) {
+    this.analytics.logEvent('GOTO_' + social.toUpperCase() + '_event');
+  }
 }

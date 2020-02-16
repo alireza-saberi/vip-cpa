@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "vip-cpa"
+  },
+  "targets": {
+    "vip-cpa": {
+      "hosting": {
+        "my-vip-cpa": [
+          "vip-cpa"
+        ]
+      }
+    }
   }
 }

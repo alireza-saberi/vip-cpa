@@ -4,26 +4,27 @@ import {TranslateService} from '@ngx-translate/core';
 import {AngularFireAnalytics} from '@angular/fire/analytics';
 
 @Component({
-  selector: 'app-service-three',
-  templateUrl: './service-three.component.html',
-  styleUrls: ['./service-three.component.scss']
+  selector: 'app-service-five',
+  templateUrl: './service-five.component.html',
+  styleUrls: ['./service-five.component.scss']
 })
-export class ServiceThreeComponent implements OnInit {
+export class ServiceFiveComponent implements OnInit {
 
   constructor(private meta: Meta,
               private titleService: Title,
               private translate: TranslateService,
-              private analytics: AngularFireAnalytics) { }
+              private analytics: AngularFireAnalytics
+  ) { }
 
   ngOnInit() {
-    this.titleService.setTitle('VIP CPA | Bookkeeping');
+    this.titleService.setTitle('VIP CPA | Financial Statements');
     this.meta.addTag({
-      name: 'bookkeeping-tax',
-      content: 'Bookkeeping as one of VIP CPA services'
+      name: 'financial-statements',
+      content: 'Financial Statements as one of VIP CPA services'
     });
     this.analytics.logEvent('select_content', {
-      content_type: 'bookkeeping',
-      item_id: 3
+      content_type: 'finanvial-statements',
+      item_id: 5
     });
   }
 

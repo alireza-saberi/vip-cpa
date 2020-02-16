@@ -6,6 +6,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import {AngularFireAnalytics} from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-moving-header',
@@ -28,9 +29,13 @@ export class MovingHeaderComponent implements OnInit {
   vipAddress = 'https://www.google.ca/maps/place/1410+Rue+Stanley+%23405,+Montr%C3%A9al,+QC+H3A+2W6/@45.4993508,-73.5762726,17z' +
     '/data=!3m1!4b1!4m5!3m4!1s0x4cc91a422ab4961b:0xe9756e733fae8dce!8m2!3d45.4993508!4d-73.5740839';
 
-  constructor() { }
+  constructor(
+    private analytics: AngularFireAnalytics
+  ) { }
 
   ngOnInit() {
   }
-
+  contactBy(method: string) {
+    this.analytics.logEvent('GOTO_' + method.toUpperCase() + 'HEADER_event');
+  }
 }

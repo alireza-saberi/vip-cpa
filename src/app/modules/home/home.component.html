@@ -126,47 +126,79 @@
       </h2>
     </div>
     <div class="our-services-container">
-    <div class="service"
-         (keyup.enter)="routTo('/our-services/personal-tax')"
-         (click)="routTo('/our-services/personal-tax')">
-      <app-bang [route]="'/our-services/personal-tax'"
-                [img-src]="'../../assets/icons/vip-cpa-personal-tax.svg'">
-        <h3>Personal Taxes</h3>
-        <ul>
-          <li>Individual & Family</li>
-          <li>Professionals</li>
-          <li>Self Employed</li>
-          <li>Special Cases</li>
-        </ul>
-      </app-bang>
-    </div>
-    <div class="service"
-         (keyup.enter)="routTo('/our-services/corporate-tax')"
-         (click)="routTo('/our-services/corporate-tax')">
-      <app-bang [route]="'/our-services/corporate-tax'"
-        [img-src]="'../../assets/icons/vip-cpa-corporate-tax.svg'"
-        [more]="true">
-        <h3>Corporate Taxes</h3>
-        <p>
-          WE GOT YOU COVERED with payroll, taxes, HR compliance and accurate financial reports to provide
-          to members, banks, investors or others
-        </p>
-      </app-bang>
-    </div>
-    <div class="service"
-         (keyup.enter)="routTo('/our-services/bookkeeping')"
-         (click)="routTo('/our-services/bookkeeping')">
-      <app-bang [route]="'/our-services/bookkeeping'"
-                [img-src]="'../../assets/icons/vip-cpa-bookkeeping.svg'">
-        <h3>Bookkeeping</h3>
-        <ul>
-          <li>General Statements</li>
-          <li>Govt. Reporting</li>
-          <li>Consulting & Planning</li>
-          <li>Payroll Services</li>
-        </ul>
-      </app-bang>
-    </div>
+      <div class="service"
+           (keyup.enter)="routTo('/our-services/corporate-tax')"
+           (click)="routTo('/our-services/corporate-tax')">
+        <app-bang [route]="'/our-services/corporate-tax'"
+                  [img-src]="'../../assets/icons/vip-cpa-corporate-tax-service.svg'"
+                  [more]="true">
+          <h3>Corporate Tax</h3>
+          <ul>
+            <li>Corporate income tax returns</li>
+            <li>Research and Development tax credits</li>
+          </ul>
+        </app-bang>
+      </div>
+      <div class="service"
+           (keyup.enter)="routTo('/our-services/personal-tax')"
+           (click)="routTo('/our-services/personal-tax')">
+        <app-bang [route]="'/our-services/personal-tax'"
+                  [img-src]="'../../assets/icons/vip-cpa-income-tax-service.svg'">
+          <h3>Personal Income Taxes</h3>
+          <ul>
+            <li>Quebec & All other provinces</li>
+            <li>Current & previous years</li>
+            <li>Professional & Self-employed</li>
+            <li>Capital gains & investment income</li>
+            <li>Rental property income</li>
+            <li>US-CAD cross border taxation</li>
+            <li>Non-resident taxation</li>
+            <li>US tax returns</li>
+          </ul>
+        </app-bang>
+      </div>
+      <div class="service"
+           (keyup.enter)="routTo('/our-services/bookkeeping')"
+           (click)="routTo('/our-services/bookkeeping')">
+        <app-bang [route]="'/our-services/bookkeeping'"
+                  [img-src]="'../../assets/icons/vip-cpa-bookkeeping-service.svg'"
+                  [more]="true">
+          <h3>Bookkeeping</h3>
+          <ul>
+            <li>Monthly or quarterly bookkeeping services</li>
+            <li>Sales tax reports (GST-QST-HST)</li>
+            <li>Accounting software integration</li>
+            <li>Bookkeeping for Portfolio Investments</li>
+          </ul>
+        </app-bang>
+      </div>
+      <div class="service"
+           (keyup.enter)="routTo('/our-services/payroll')"
+           (click)="routTo('/our-services/payroll')">
+        <app-bang [route]="'/our-services/payroll'"
+                  [img-src]="'../../assets/icons/vip-cpa-payroll-service.svg'"
+                  [more]="true">
+          <h3>Payroll</h3>
+          <ul>
+            <li>Payroll preparation and administration</li>
+            <li>Source deduction remittances</li>
+            <li>CSST Reports</li>
+          </ul>
+        </app-bang>
+      </div>
+      <div class="service"
+           (keyup.enter)="routTo('/our-services/financial-statements')"
+           (click)="routTo('/our-services/financial-statements')">
+        <app-bang [route]="'/our-services/financial-statements'"
+                  [img-src]="'../../assets/icons/vip-cpa-financial-statement-service.svg'"
+                  [more]="true">
+          <h3>Financial Statements</h3>
+          <ul>
+            <li>Compilation engagements</li>
+            <li>Notice to reader (NTR)</li>
+          </ul>
+        </app-bang>
+      </div>
     </div>
   </section>
 </main>

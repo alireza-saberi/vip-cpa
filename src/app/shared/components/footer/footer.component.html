@@ -4,19 +4,19 @@
       {{ 'FOLLOW_US' | translate }}:
     </header>
     <section>
-      <a href="" target="_blank">
+      <a href="" target="_blank" (click)="goToSocial('fb')">
         <i class="fa fa-facebook" aria-hidden="true"></i>
       </a>
-      <a href="" target="_blank">
+      <a href="" target="_blank" (click)="goToSocial('li')">
         <i class="fa fa-linkedin" aria-hidden="true"></i>
       </a>
-      <a href="" target="_blank">
+      <a href="" target="_blank" (click)="goToSocial('md')">
         <i class="fa fa-medium" aria-hidden="true"></i>
       </a>
-      <a href="" target="_blank">
+      <a href="" target="_blank" (click)="goToSocial('yp')">
         <i class="fa fa-yelp"aria-hidden="true"></i>
       </a>
-      <a href="" target="_blank">
+      <a href="" target="_blank" (click)="goToSocial('fs')">
         <i class="fa fa-foursquare" aria-hidden="true"></i>
       </a>
     </section>
@@ -25,6 +25,7 @@
             <section class="widget-text">
               <a [href]="cpaCanadaDomain"
                  target="_blank"
+                 (click)="goToSocial('cpa-canadian')"
                  rel="noopener noreferrer">
                 <img src="./assets/images/cpa-chartered-professional-accountant.png"
                      alt="cpa chartered professional accountant logo">

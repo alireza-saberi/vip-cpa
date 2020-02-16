@@ -4,8 +4,10 @@
     <app-side-navigator
       (sidenav-close)="closeSideNav($event)"></app-side-navigator>
   </ng-container>
-  <router-outlet></router-outlet>
-  <app-scroll-to-top></app-scroll-to-top>
-  <app-footer></app-footer>
+  <div class="content-wrap">
+    <router-outlet></router-outlet>
+    <app-scroll-to-top></app-scroll-to-top>
+    <app-footer></app-footer>
+  </div>
 </article>
 

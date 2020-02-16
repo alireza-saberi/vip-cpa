@@ -1,4 +1,19 @@
+@import './src/assets/style/variables';
 .app-container {
   width: 100%;
   overflow-y: hidden;
+  position: relative;
+  min-height: 100vh;
+
+  .content-wrap {
+    padding-bottom: 510px;    /* Footer height */
+  }
+}
+
+@media screen and (min-width: $mobile-screen-max-width + 1) {
+  .app-container {
+    .content-wrap {
+      padding-bottom: 281px;    /* Footer height */
+    }
+  }
 }

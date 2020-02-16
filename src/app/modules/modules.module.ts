@@ -19,6 +19,8 @@ import { ServiceTwoComponent } from './our-services/service-two/service-two.comp
 import { ServiceThreeComponent } from './our-services/service-three/service-three.component';
 import {RouterModule} from '@angular/router';
 import {TranslateModule} from '@ngx-translate/core';
+import { ServiceFourComponent } from './our-services/service-four/service-four.component';
+import { ServiceFiveComponent } from './our-services/service-five/service-five.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -42,6 +44,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ServiceOneComponent,
     ServiceTwoComponent,
     ServiceThreeComponent,
+    ServiceFourComponent,
+    ServiceFiveComponent,
   ],
   imports: [
     CommonModule,

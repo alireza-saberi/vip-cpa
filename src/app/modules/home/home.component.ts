@@ -10,6 +10,8 @@ import {Store} from '@ngxs/store';
 import {ChangeNavState} from '../../core/states/app.state';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import { Router} from '@angular/router';
+import {AngularFireAnalytics} from '@angular/fire/analytics';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -59,7 +61,10 @@ export class HomeComponent implements OnInit {
               private zone: NgZone,
               private router: Router,
               private meta: Meta,
-              private titleService: Title) { }
+              private titleService: Title,
+              private translate: TranslateService,
+              private analytics: AngularFireAnalytics
+  ) { }
   ngOnInit() {
     this.store.dispatch(new ChangeNavState('home'));
     this.runTimer();
@@ -67,6 +72,10 @@ export class HomeComponent implements OnInit {
     this.meta.addTag({
       name: 'Home',
       content: 'Montreal Tax Certified Public Accountant'
+    });
+    this.analytics.logEvent('HOME_PAGE_event', {
+      lang_browser: this.translate.getBrowserLang(),
+      lang_user: this.translate.currentLang
     });
   }
 

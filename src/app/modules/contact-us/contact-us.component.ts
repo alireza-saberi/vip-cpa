@@ -4,6 +4,7 @@ import {Store} from '@ngxs/store';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {Meta, Title} from '@angular/platform-browser';
 import {TranslateService} from '@ngx-translate/core';
+import {AngularFireAnalytics} from '@angular/fire/analytics';
 
 @Component({
   selector: 'app-contact-us',
@@ -19,14 +20,23 @@ export class ContactUsComponent implements OnInit {
   constructor(private store: Store,
               private meta: Meta,
               private titleService: Title,
-              private translate: TranslateService) { }
+              private translate: TranslateService,
+              private analytics: AngularFireAnalytics
+              ) { }
 
   ngOnInit() {
     this.store.dispatch(new ChangeNavState('contact'));
-    this.titleService.setTitle('VIP CPA | ' + this.translate.get('CONTACT_US'));
+    this.titleService.setTitle('VIP CPA | Contact Us');
     this.meta.addTag({
       name: 'contact-us',
       content: 'different method to contact VIP CPA'
     });
+    this.analytics.logEvent('CONTACT_US_PAGE_event', {
+      lang_browser: this.translate.getBrowserLang(),
+      lang_user: this.translate.currentLang
+    });
+  }
+  contactBy(method: string) {
+    this.analytics.logEvent('GOTO_' + method.toUpperCase() + 'CONTACT_US_event');
   }
 }

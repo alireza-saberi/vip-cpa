@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 import { NgxsModule } from '@ngxs/store';
 import { AgmCoreModule } from '@agm/core';
+import { AngularFireModule } from '@angular/fire';
 
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
@@ -28,6 +29,10 @@ import { TermsComponent } from './modules/terms/terms.component';
 import {ServiceOneComponent} from './modules/our-services/service-one/service-one.component';
 import {ServiceTwoComponent} from './modules/our-services/service-two/service-two.component';
 import {ServiceThreeComponent} from './modules/our-services/service-three/service-three.component';
+import {ServiceFourComponent} from './modules/our-services/service-four/service-four.component';
+import {ServiceFiveComponent} from './modules/our-services/service-five/service-five.component';
+import {APIKeys} from './configs/keys';
+import {AngularFireAnalyticsModule} from '@angular/fire/analytics';
 
 const routesArrayOfObject: Routes = [
   {
@@ -49,6 +54,14 @@ const routesArrayOfObject: Routes = [
       {
         path: 'bookkeeping',
         component: ServiceThreeComponent
+      },
+      {
+        path: 'payroll',
+        component: ServiceFourComponent
+      },
+      {
+        path: 'financial-statements',
+        component: ServiceFiveComponent
       },
       {
         path: '**',
@@ -92,13 +105,13 @@ const routesArrayOfObject: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routesArrayOfObject),
     NgxsModule.forRoot([AppState]),
+    AngularFireModule.initializeApp(APIKeys.firebaseConfig),
+    AngularFireAnalyticsModule,
     SharedModule,
     CoreModule,
     ModulesModule,
     MatIconModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBp2XGtO263zgv4wHKFEqhNpPfT4p0XWWQ'
-    }),
+    AgmCoreModule.forRoot(APIKeys.googleMapConfig),
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
