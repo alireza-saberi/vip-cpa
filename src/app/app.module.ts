@@ -116,7 +116,9 @@ const routesArrayOfObject: Routes = [
     CoreModule,
     ModulesModule,
     MatIconModule,
-    AgmCoreModule.forRoot(APIKeys.googleMapConfig),
+    AgmCoreModule.forRoot({
+      apiKey: APIKeys.googleMapConfig.apiKey
+    }),
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
