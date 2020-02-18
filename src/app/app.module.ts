@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgxsModule } from '@ngxs/store';
 import { AgmCoreModule } from '@agm/core';
 import { AngularFireModule } from '@angular/fire';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
@@ -129,7 +131,7 @@ const routesArrayOfObject: Routes = [
     }),
     MatMenuModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
