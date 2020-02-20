@@ -26,5 +26,16 @@ export class ServiceFourComponent implements OnInit {
       content_type: 'payroll',
       item_id: 4
     });
+    this.scrollToTop();
+  }
+
+  scrollToTop() {
+    (function smoothscroll() {
+      const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(smoothscroll);
+        window.scrollTo(0, currentScroll - (currentScroll / 8));
+      }
+    })();
   }
 }

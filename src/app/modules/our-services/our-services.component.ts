@@ -25,10 +25,20 @@ export class OurServicesComponent implements OnInit {
       lang_browser: this.translate.getBrowserLang(),
       lang_user: this.translate.currentLang
     });
+    this.scrollToTop();
   }
 
   routTo(r: string): void {
     this.router.navigate([r]);
   }
 
+  scrollToTop() {
+    (function smoothscroll() {
+      const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(smoothscroll);
+        window.scrollTo(0, currentScroll - (currentScroll / 8));
+      }
+    })();
+  }
 }

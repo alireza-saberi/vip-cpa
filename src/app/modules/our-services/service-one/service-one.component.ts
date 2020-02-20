@@ -26,6 +26,17 @@ export class ServiceOneComponent implements OnInit {
       content_type: 'personal-tax',
       item_id: 1
     });
+    this.scrollToTop();
+  }
+
+  scrollToTop() {
+    (function smoothscroll() {
+      const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(smoothscroll);
+        window.scrollTo(0, currentScroll - (currentScroll / 8));
+      }
+    })();
   }
 
 }

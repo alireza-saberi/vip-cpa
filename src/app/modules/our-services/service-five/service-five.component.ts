@@ -26,6 +26,16 @@ export class ServiceFiveComponent implements OnInit {
       content_type: 'finanvial-statements',
       item_id: 5
     });
+    this.scrollToTop();
   }
 
+  scrollToTop() {
+    (function smoothscroll() {
+      const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(smoothscroll);
+        window.scrollTo(0, currentScroll - (currentScroll / 8));
+      }
+    })();
+  }
 }

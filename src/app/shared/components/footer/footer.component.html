@@ -27,8 +27,13 @@
                  target="_blank"
                  (click)="goToSocial('cpa-canadian')"
                  rel="noopener noreferrer">
-                <img src="./assets/images/cpa-chartered-professional-accountant.png"
-                     alt="cpa chartered professional accountant logo">
+                <picture>
+                  <source srcset="./assets/images/cpa-chartered-professional-accountant.jp2" type="image/jp2"> <!-- format supported by safari -->
+                  <source srcset="./assets/images/cpa-chartered-professional-accountant.webp" type="image/webp"> <!-- format supported on many browsers -->
+                  <source srcset="./assets/images/cpa-chartered-professional-accountant.png" type="image/png"> <!-- common supported format -->
+                  <img src="./assets/images/cpa-chartered-professional-accountant.png"
+                       alt="cpa chartered professional accountant logo">
+                </picture>
               </a>
             </section>
   </article>
