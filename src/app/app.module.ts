@@ -22,6 +22,7 @@ import { AppState } from './core/states/app.state';
 import {APIKeys} from './configs/keys';
 import {AngularFireAnalyticsModule} from '@angular/fire/analytics';
 import {appRoutingModule} from './app.routing';
+import {QuicklinkModule} from 'ngx-quicklink';
 
 
 
@@ -32,6 +33,7 @@ import {appRoutingModule} from './app.routing';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    QuicklinkModule,
     appRoutingModule,
     NgxsModule.forRoot([AppState]),
     AngularFireModule.initializeApp(APIKeys.firebaseConfig),

@@ -1,4 +1,4 @@
-import {Routes, RouterModule} from '@angular/router';
+import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
 import {HomeComponent} from './modules/home/home.component';
 import {OurServicesComponent} from './modules/our-services/our-services.component';
 import {ServiceOneComponent} from './modules/our-services/service-one/service-one.component';
@@ -12,6 +12,7 @@ import {PrivacyPolicyComponent} from './modules/privacy-policy/privacy-policy.co
 import {TermsComponent} from './modules/terms/terms.component';
 import {SiteMapComponent} from './modules/site-map/site-map.component';
 import {RebrandingComponent} from './modules/rebranding/rebranding.component';
+import {QuicklinkStrategy} from 'ngx-quicklink';
 
 const routesArrayOfObject: Routes = [
   {
@@ -78,4 +79,6 @@ const routesArrayOfObject: Routes = [
   }
 ];
 
-export const appRoutingModule = RouterModule.forRoot(routesArrayOfObject);
+export const appRoutingModule = RouterModule.forRoot(routesArrayOfObject, {
+  preloadingStrategy: QuicklinkStrategy
+});
