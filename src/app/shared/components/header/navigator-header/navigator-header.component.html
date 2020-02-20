@@ -12,9 +12,10 @@
     </a>
   </li>
   <li class="nav-item" role="none">
-    <a class="nav-link"
+    <a class="nav-link active"
        mat-button [matMenuTriggerFor]="services"
        (keyup.enter)="openMenu($event)"
+       [ngClass]="{'active':isService}"
        role="menuitem"
        aria-haspopup="true"
        aria-expanded="false">

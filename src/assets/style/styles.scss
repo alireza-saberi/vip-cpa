@@ -48,3 +48,24 @@ body {
   background: rgba(247,166,27,0.5);
   color: $primary;
 }
+
+.mat-menu-trigger.mat-button.cdk-focused.cdk-keyboard-focused{
+  color: $primary !important;
+  border: 1px solid $secondary;
+  background-color: white !important;
+  border-radius: 0 !important;
+}
+
+.mat-menu-trigger.mat-button.cdk-focused.cdk-mouse-focused{
+  color: $primary !important;
+  //border: 1px solid $secondary;
+  background-color: rgba(0,0,0,0) !important;
+  border-radius: 0 !important;
+}
+
+.mat-menu-trigger.mat-button.cdk-hovered{
+  color: $primary !important;
+  border: 1px solid $secondary;
+  background-color: white !important;
+  border-radius: 0 !important;
+}

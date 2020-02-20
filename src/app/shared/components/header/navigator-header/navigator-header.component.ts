@@ -1,9 +1,10 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {Select, Store} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import { AppState , ChangeNavState } from '../../../../core/states/app.state';
 import {MatMenuTrigger} from '@angular/material';
+import {FocusMonitor} from '@angular/cdk/a11y';
 
 @Component({
   selector: 'app-navigator-header',
@@ -61,7 +62,6 @@ export class NavigatorHeaderComponent implements OnInit {
       }
     });
   }
-
   openMenu($event) {
     this.trigger.openMenu();
   }
