@@ -9,6 +9,7 @@ import {ChangeNavState} from '../../../../core/states/app.state';
 })
 export class SideNavigatorComponent implements OnInit {
   @Output('sidenav-close') burgerClick: EventEmitter<boolean> = new EventEmitter<boolean>();
+  private close = true;
 
   constructor(private store: Store) { }
 
@@ -30,5 +31,9 @@ export class SideNavigatorComponent implements OnInit {
   closeSideNavContact($event) {
     this.burgerClick.emit(true);
     this.store.dispatch(new ChangeNavState('contact'));
+  }
+
+  toggleService($event) {
+    this.close = !this.close;
   }
 }

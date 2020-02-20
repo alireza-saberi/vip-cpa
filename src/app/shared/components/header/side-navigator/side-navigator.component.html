@@ -6,31 +6,35 @@
         {{ 'HOME'| translate }}</a>
     </li>
     <li class="item">
-      <a routerLink="/our-services" (click)="closeSideNavService($event)">
+      <a routerLink="/our-services"
+         class="service"
+         (click)="toggleService($event)">
         {{ 'SERVICES'| translate }}
+        <mat-icon *ngIf="close">add</mat-icon>
+        <mat-icon *ngIf="!close">remove</mat-icon>
       </a>
-      <ul>
-        <li class="item">
+      <ul *ngIf="!close" class="drawer">
+        <li class="item sub-item">
           <a routerLink="/our-services/personal-tax" (click)="closeSideNavService($event)">
             &nbsp;  Personal Tax
           </a>
         </li>
-        <li class="item">
+        <li class="item sub-item">
           <a routerLink="/our-services/corporate-tax" (click)="closeSideNavService($event)">
           &nbsp; Corporate Tax
           </a>
         </li>
-        <li class="item">
+        <li class="item sub-item">
           <a routerLink="/our-services/bookkeeping" (click)="closeSideNavService($event)">
           &nbsp; Bookkeeping
           </a>
         </li>
-        <li class="item">
+        <li class="item sub-item">
           <a routerLink="/our-services/payroll" (click)="closeSideNavService($event)">
             &nbsp; Payroll
           </a>
         </li>
-        <li class="item">
+        <li class="item sub-item">
           <a routerLink="/our-services/financial-statements" (click)="closeSideNavService($event)">
             &nbsp; Financial Statements
           </a>

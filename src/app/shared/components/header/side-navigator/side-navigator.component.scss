@@ -21,13 +21,32 @@
     list-style: none;
     padding-left: 0;
 
+    &.drawer {
+      height: 200px;
+      transition: height 5s;
+    }
+
     .item {
       padding: 10px 0;
+
+      &.sub-item{
+        font-size: 12px;
+      }
 
       a {
         text-decoration: none;
         color: $secondary;
         display: block;
+
+        &.service {
+          display: flex;
+          position: relative;
+
+          .mat-icon {
+            position: absolute;
+            right: 0;
+          }
+        }
       }
     }
   }
