@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxsModule } from '@ngxs/store';
 import { AgmCoreModule } from '@agm/core';
 import { AngularFireModule } from '@angular/fire';
-import { RouterModule } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { SharedModule } from './shared/shared.module';
@@ -14,16 +13,16 @@ import { ModulesModule } from './modules/modules.module';
 import { MatIconModule } from '@angular/material';
 import {MatMenuModule} from '@angular/material/menu';
 
-
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AppState } from './core/states/app.state';
-import {APIKeys} from './configs/keys';
 import {AngularFireAnalyticsModule} from '@angular/fire/analytics';
 import {appRoutingModule} from './app.routing';
 import {QuicklinkModule} from 'ngx-quicklink';
-
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import {APIKeys} from './configs/keys';
 
 
 @NgModule({
@@ -53,7 +52,8 @@ import {QuicklinkModule} from 'ngx-quicklink';
         deps: [HttpClient]
       }
     }),
-    MatMenuModule
+    MatMenuModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
@@ -62,4 +62,4 @@ export class AppModule { }
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
-}
+};

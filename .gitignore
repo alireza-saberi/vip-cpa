@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# keys & configs
+/src/app/configs/keys.ts
+src/app/configs/**
+
 # compiled output
 /dist
 /tmp
@@ -45,5 +49,3 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# keys & configs
-/src/app/configs
