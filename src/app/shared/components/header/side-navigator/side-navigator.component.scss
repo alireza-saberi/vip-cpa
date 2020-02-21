@@ -40,12 +40,7 @@
 
         &.service {
           display: flex;
-          position: relative;
-
-          .mat-icon {
-            position: absolute;
-            right: 0;
-          }
+          justify-content: space-between;
         }
       }
     }
