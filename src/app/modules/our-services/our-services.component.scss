@@ -41,7 +41,9 @@
 
   .our-services {
     margin-top: -15px;
-    background-image: url(../../../assets/images/background.jpg) !important;
+    background-image: url(../../../assets/images/background.webp),
+                      url(../../../assets/images/background.jp2),
+                      url(../../../assets/images/background.jpg) !important;
     padding: 25px 35px;
     .our-services-container {
       display: flex;

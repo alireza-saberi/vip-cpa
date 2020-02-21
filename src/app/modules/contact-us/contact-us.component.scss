@@ -47,8 +47,9 @@
   }
 
   .contact-us {
-    background-image: url(../../../assets/images/background.jpg) !important;
-    //    background-image: url(./src/assets/images/background.jpg) !important;
+    background-image: url(../../../assets/images/background.webp),
+                      url(../../../assets/images/background.jp2),
+                      url(../../../assets/images/background.jpg) !important;
 
     .short-into {
       p {

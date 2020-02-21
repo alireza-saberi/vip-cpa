@@ -41,7 +41,9 @@
   .big-news {
     padding-top: 6% !important;
     padding-bottom: 6% !important;
-    background-image: url(../../../assets/images/about-us-background.jpg) !important;
+    background-image: url(../../../assets/images/about-us-background.webp),
+                      url(../../../assets/images/about-us-background.jp2),
+                      url(../../../assets/images/about-us-background.jpg) !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;

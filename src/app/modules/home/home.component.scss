@@ -89,7 +89,9 @@
   }
 
   .our-services {
-    background-image: url(../../../assets/images/background.jpg) !important;
+    background-image: url(../../../assets/images/background.webp),
+                      url(../../../assets/images/background.jp2),
+                      url(../../../assets/images/background.jpg) !important;
     padding: 15px 35px;
     .title {
       text-align: center;

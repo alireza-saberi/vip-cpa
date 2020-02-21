@@ -47,7 +47,9 @@
   .privacy-policy-details {
     margin-top: -15px;
     padding: 35px 35px;
-    background-image: url(../../../assets/images/background.jpg) !important;
+    background-image: url(../../../assets/images/background.webp),
+                      url(../../../assets/images/background.jp2),
+                      url(../../../assets/images/background.jpg) !important;
 
     h4 {
       font-weight: 600;
