@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://vip-cpa.firebaseapp.com/sitemap.xml
+Sitemap: https://vipcpa.ca/#/site-map
