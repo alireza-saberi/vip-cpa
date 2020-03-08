@@ -19,8 +19,16 @@ export class ServiceFourComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('VIP CPA | Payroll');
     this.meta.addTag({
-      name: 'payroll',
+      name: 'description',
       content: 'Payroll as one of VIP CPA services'
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'Accountant, Downtown, Montreal, payroll'
+    });
+    this.meta.addTag({
+      name: 'robots',
+      content: 'index, follow'
     });
     this.analytics.logEvent('select_content', {
       content_type: 'payroll',

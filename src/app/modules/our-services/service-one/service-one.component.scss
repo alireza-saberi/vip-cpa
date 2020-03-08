@@ -1,3 +1,5 @@
+@import './src/assets/style/variables';
+
 .service1-wrapper {
     padding-top: 2% !important;
     padding-bottom: 2% !important;
@@ -10,4 +12,28 @@
     background-repeat: no-repeat !important;
     background-size: cover !important;
     margin-top: -16px;
+
+  ul {
+    li {
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      font-weight: normal;
+      display: flex;
+
+      a {
+        display: flex;
+        color: $primary;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      div {
+        display: flex;
+      }
+
+      &.outside {
+        flex-direction: column;
+      }
+    }
+  }
 }

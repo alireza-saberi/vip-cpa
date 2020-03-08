@@ -19,8 +19,16 @@ export class ServiceOneComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('VIP CPA | Personal Taxes');
     this.meta.addTag({
-      name: 'personal-tax',
+      name: 'description',
       content: 'Personal Taxes as one of VIP CPA services'
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, Tax deduction'
+    });
+    this.meta.addTag({
+      name: 'robots',
+      content: 'index, follow'
     });
     this.analytics.logEvent('select_content', {
       content_type: 'personal-tax',

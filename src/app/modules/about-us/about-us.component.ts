@@ -23,8 +23,17 @@ export class AboutUsComponent implements OnInit {
     this.store.dispatch(new ChangeNavState('aboutus'));
     this.titleService.setTitle('VIP CPA | About');
     this.meta.addTag({
-      name: 'about-us',
+      name: 'description',
       content: 'About VIP CPA'
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
+        'Tax deduction, Payroll, Bookkeeping, Financial statement'
+    });
+    this.meta.addTag({
+      name: 'robots',
+      content: 'index, follow'
     });
     this.analytics.logEvent('ABOUT_US_PAGE_event', {
       lang_browser: this.translate.getBrowserLang(),

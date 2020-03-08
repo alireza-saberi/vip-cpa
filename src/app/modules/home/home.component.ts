@@ -70,8 +70,17 @@ export class HomeComponent implements OnInit {
     this.runTimer();
     this.titleService.setTitle('VIP CPA | Montreal Tax Certified Public Accountant');
     this.meta.addTag({
-      name: 'Home',
-      content: 'Montreal Tax Certified Public Accountant'
+      name: 'description',
+      content: 'VIP CPA offers top-notch tax and accounting services for businesses and individuals.'
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
+        'Tax deduction, Payroll, Bookkeeping, Financial statement'
+    });
+    this.meta.addTag({
+      name: 'robots',
+      content: 'index, follow'
     });
     this.analytics.logEvent('HOME_PAGE_event', {
       lang_browser: this.translate.getBrowserLang(),

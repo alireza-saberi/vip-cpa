@@ -19,8 +19,16 @@ export class ServiceFiveComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('VIP CPA | Financial Statements');
     this.meta.addTag({
-      name: 'financial-statements',
+      name: 'description',
       content: 'Financial Statements as one of VIP CPA services'
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'Accountant, Downtown, Montreal, Financial Statements'
+    });
+    this.meta.addTag({
+      name: 'robots',
+      content: 'index, follow'
     });
     this.analytics.logEvent('select_content', {
       content_type: 'finanvial-statements',

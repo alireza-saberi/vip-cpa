@@ -28,8 +28,17 @@ export class ContactUsComponent implements OnInit {
     this.store.dispatch(new ChangeNavState('contact'));
     this.titleService.setTitle('VIP CPA | Contact Us');
     this.meta.addTag({
-      name: 'contact-us',
+      name: 'description',
       content: 'different method to contact VIP CPA'
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
+        'Tax deduction, Payroll, Bookkeeping, Financial statement, Contact us'
+    });
+    this.meta.addTag({
+      name: 'robots',
+      content: 'index, follow'
     });
     this.analytics.logEvent('CONTACT_US_PAGE_event', {
       lang_browser: this.translate.getBrowserLang(),

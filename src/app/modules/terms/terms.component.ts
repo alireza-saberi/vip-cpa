@@ -21,8 +21,17 @@ export class TermsComponent implements OnInit {
     this.store.dispatch(new ChangeNavState('-'));
     this.titleService.setTitle('VIP CPA | Terms & Conditions');
     this.meta.addTag({
-      name: 'terms',
+      name: 'description',
       content: 'Terms & Conditions at VIP CPA'
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
+        'Tax deduction, Payroll, Bookkeeping, Financial statement, Terms'
+    });
+    this.meta.addTag({
+      name: 'robots',
+      content: 'index, follow'
     });
     this.analytics.logEvent('TERMS_PAGE_event', {
       lang_browser: this.translate.getBrowserLang(),

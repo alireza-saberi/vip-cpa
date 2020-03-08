@@ -18,8 +18,16 @@ export class ServiceThreeComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('VIP CPA | Bookkeeping');
     this.meta.addTag({
-      name: 'bookkeeping-tax',
+      name: 'description',
       content: 'Bookkeeping as one of VIP CPA services'
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'Accountant, Downtown, Montreal, bookkeeping'
+    });
+    this.meta.addTag({
+      name: 'robots',
+      content: 'index, follow'
     });
     this.analytics.logEvent('select_content', {
       content_type: 'bookkeeping',

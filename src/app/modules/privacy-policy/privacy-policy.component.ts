@@ -21,8 +21,17 @@ export class PrivacyPolicyComponent implements OnInit {
     this.store.dispatch(new ChangeNavState('-'));
     this.titleService.setTitle('VIP CPA | Privacy Policy');
     this.meta.addTag({
-      name: 'privacy-policy',
+      name: 'description',
       content: 'Privacy Policy at VIP CPA'
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
+        'Tax deduction, Payroll, Bookkeeping, Financial statement, Privacy Policy'
+    });
+    this.meta.addTag({
+      name: 'robots',
+      content: 'index, follow'
     });
     this.analytics.logEvent('PRIVACY_PAGE_event', {
       lang_browser: this.translate.getBrowserLang(),
