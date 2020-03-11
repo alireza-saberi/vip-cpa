@@ -29,7 +29,8 @@ export class ContactUsComponent implements OnInit {
     this.titleService.setTitle('VIP CPA | Contact Us');
     this.meta.addTag({
       name: 'description',
-      content: 'different method to contact VIP CPA'
+      content: '1410 Rue Stanley, unit #405, Montréal, QC H3A 2W6 ' +
+        'Phone Number. +1(514) 227-8000. E-mail Address. info@vipcpa.ca'
     });
     this.meta.addTag({
       name: 'keywords',

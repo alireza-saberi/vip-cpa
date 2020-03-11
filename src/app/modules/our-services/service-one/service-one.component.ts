@@ -20,7 +20,9 @@ export class ServiceOneComponent implements OnInit {
     this.titleService.setTitle('VIP CPA | Personal Taxes');
     this.meta.addTag({
       name: 'description',
-      content: 'Personal Taxes as one of VIP CPA services'
+      content: 'You don’t have to worry about incorrectly filing your taxes. Located in downtown Montreal, VIP CPA offers' +
+        'you top-notch individual taxation help, you will be able to quickly and accurately process and file your tax return' +
+        ' while providing the individual attention you deserve'
     });
     this.meta.addTag({
       name: 'keywords',

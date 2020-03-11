@@ -20,7 +20,9 @@ export class ServiceFiveComponent implements OnInit {
     this.titleService.setTitle('VIP CPA | Financial Statements');
     this.meta.addTag({
       name: 'description',
-      content: 'Financial Statements as one of VIP CPA services'
+      content: 'Here at VIP CPA, our team of accountants in downtown Montreal can put together' +
+        ' forward-looking financial to give you an idea of how future budgets may look. ' +
+        'This service will help set your business up for success.'
     });
     this.meta.addTag({
       name: 'keywords',

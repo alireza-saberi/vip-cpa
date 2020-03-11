@@ -20,7 +20,9 @@ export class ServiceFourComponent implements OnInit {
     this.titleService.setTitle('VIP CPA | Payroll');
     this.meta.addTag({
       name: 'description',
-      content: 'Payroll as one of VIP CPA services'
+      content: 'VIP CPA in downtown Montreal will simplify payroll for small business. ' +
+        'We create an easy to abide by and understand system for small business owners, ' +
+        'taking into account the full range of remittance sources'
     });
     this.meta.addTag({
       name: 'keywords',

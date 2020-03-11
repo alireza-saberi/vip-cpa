@@ -24,7 +24,8 @@ export class AboutUsComponent implements OnInit {
     this.titleService.setTitle('VIP CPA | About');
     this.meta.addTag({
       name: 'description',
-      content: 'About VIP CPA'
+      content: 'Founded in 2004 by Hasan Salhab (MBA) as ATS-consulting in downtown Montreal offers ' +
+        'top-notch tax and accounting services for businesses and individuals.'
     });
     this.meta.addTag({
       name: 'keywords',
