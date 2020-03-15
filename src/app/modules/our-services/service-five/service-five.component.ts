@@ -21,8 +21,8 @@ export class ServiceFiveComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content: 'Here at VIP CPA, our team of accountants in downtown Montreal can put together' +
-        ' forward-looking financial to give you an idea of how future budgets may look. ' +
-        'This service will help set your business up for success.'
+        ' forward-looking financial to give you an idea of how future budgets may look.' +
+        ' This service will help set your business up for success.'
     });
     this.meta.addTag({
       name: 'keywords',

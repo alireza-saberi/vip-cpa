@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { OurServicesComponent } from './our-services/our-services.component';
-import { BlogComponent } from './blog/blog.component';
 import {SharedModule} from '../shared/shared.module';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
@@ -37,7 +36,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HomeComponent,
     ContactUsComponent,
     OurServicesComponent,
-    BlogComponent,
     AboutUsComponent,
     PrivacyPolicyComponent,
     SiteMapComponent,
@@ -64,7 +62,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HomeComponent,
     ContactUsComponent,
     OurServicesComponent,
-    BlogComponent,
     TermsComponent,
     PrivacyPolicyComponent,
     ServiceOneComponent,

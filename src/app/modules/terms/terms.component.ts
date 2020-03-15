@@ -22,8 +22,8 @@ export class TermsComponent implements OnInit {
     this.titleService.setTitle('VIP CPA | Terms & Conditions');
     this.meta.addTag({
       name: 'description',
-      content: 'Terms & Conditions plays an important part at VIP CPA with each client. ' +
-        'Please kindly review them before visit'
+      content: 'Terms & Conditions plays an important part at VIP CPA with each client.' +
+        ' Please kindly review them before visit'
     });
     this.meta.addTag({
       name: 'keywords',

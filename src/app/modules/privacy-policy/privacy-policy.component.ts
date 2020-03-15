@@ -22,7 +22,7 @@ export class PrivacyPolicyComponent implements OnInit {
     this.titleService.setTitle('VIP CPA | Privacy Policy');
     this.meta.addTag({
       name: 'description',
-      content: 'Privacy Policy at VIP CPA is important to us. ' +
+      content: 'Privacy Policy of you at VIP CPA is important to us. ' +
         'This page provides detailed information of our privacy policy'
     });
     this.meta.addTag({

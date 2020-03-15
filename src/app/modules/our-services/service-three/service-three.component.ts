@@ -19,8 +19,8 @@ export class ServiceThreeComponent implements OnInit {
     this.titleService.setTitle('VIP CPA | Bookkeeping');
     this.meta.addTag({
       name: 'description',
-      content: 'VIP CPA in downtown Montreal mission is to provide reliable accounting ' +
-        'and bookkeeping services'
+      content: 'VIP CPA in downtown Montreal mission is to provide reliable accounting' +
+        ' and bookkeeping services'
     });
     this.meta.addTag({
       name: 'keywords',

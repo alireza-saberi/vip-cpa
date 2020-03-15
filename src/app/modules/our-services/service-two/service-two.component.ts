@@ -19,8 +19,8 @@ export class ServiceTwoComponent implements OnInit {
       this.titleService.setTitle('VIP CPA | Corporate Taxes');
       this.meta.addTag({
         name: 'description',
-        content: 'VIP CPA in downtown Montreal is a full-service accounting firm that can provide a variety of tax ' +
-          'services including corporate tax services; VIP CPA can ct as your corporate tax accountant or provide' +
+        content: 'VIP CPA in downtown Montreal is a full-service accounting firm that can provide a variety of tax' +
+          ' services including corporate tax services; VIP CPA can ct as your corporate tax accountant or provide' +
           ' corporate tax services for you.'
       });
       this.meta.addTag({

@@ -72,7 +72,7 @@ export class HomeComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content: 'Located in downtown Montreal VIP CPA offers top-notch tax and accounting services' +
-        'for businesses and individuals. We believe accounting goes far beyond numbers. We proudly' +
+        ' for businesses and individuals. We believe accounting goes far beyond numbers. We proudly' +
         ' provide our customers with prompt response time, true attention to detail, and expertise that ' +
         'maximizes tax benefits.'
     });
