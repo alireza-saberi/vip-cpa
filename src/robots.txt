@@ -1,3 +1,3 @@
 User-agent: *
-Disallow:
-Sitemap: https://vipcpa.ca/site-map.xml
+Disallow: /client-portal
+Sitemap: https://vipcpa.ca/sitemap.xml
