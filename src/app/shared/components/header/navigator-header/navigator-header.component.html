@@ -25,7 +25,7 @@
     <mat-menu #services="matMenu">
       <button mat-menu-item
               [routerLinkActive]="['active']"
-              routerLink="/our-services/personal-tax">Individual Taxation</button>
+              routerLink="/our-services/individual-tax">Individual Taxation</button>
       <button mat-menu-item
               [routerLinkActive]="['active']"
               routerLink="/our-services/corporate-tax">Corporate Tax</button>
@@ -39,6 +39,16 @@
               [routerLinkActive]="['active']"
               routerLink="/our-services/financial-statements">Financial Statements</button>
     </mat-menu>
+  </li>
+  <li class="nav-item"
+      role="none">
+    <a class="nav-link"
+       role="menuitem"
+       routerLink="/client-portal"
+       [routerLinkActive]="['active']">
+      {{ 'CLIENT_PORATAL' | translate }}
+      <mat-icon *ngIf="isPortal" @hovering>arrow_drop_up</mat-icon>
+    </a>
   </li>
   <li class="nav-item" role="none">
     <a class="nav-link"

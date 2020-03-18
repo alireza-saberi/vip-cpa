@@ -23,17 +23,17 @@ export class ServiceOneComponent implements OnInit {
       content: 'You don’t have to worry about incorrectly filing your taxes. Located in downtown Montreal, VIP CPA offers' +
         ' you top-notch individual taxation help, you will be able to quickly and accurately process and file your tax return' +
         ' while providing the individual attention you deserve'
-    });
+    }, true);
     this.meta.addTag({
       name: 'keywords',
       content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, Tax deduction'
-    });
+    }, true);
     this.meta.addTag({
       name: 'robots',
       content: 'index, follow'
-    });
+    }, true);
     this.analytics.logEvent('select_content', {
-      content_type: 'personal-tax',
+      content_type: 'individual-tax',
       item_id: 1
     });
     this.scrollToTop();

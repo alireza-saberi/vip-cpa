@@ -13,6 +13,7 @@ import {TermsComponent} from './modules/terms/terms.component';
 import {SiteMapComponent} from './modules/site-map/site-map.component';
 import {RebrandingComponent} from './modules/rebranding/rebranding.component';
 import {QuicklinkStrategy} from 'ngx-quicklink';
+import {ClientPortalComponent} from './modules/client-portal/client-portal.component';
 
 const routesArrayOfObject: Routes = [
   {
@@ -24,7 +25,7 @@ const routesArrayOfObject: Routes = [
     component: OurServicesComponent,
     children: [
       {
-        path: 'personal-tax',
+        path: 'individual-tax',
         component: ServiceOneComponent
       },
       {
@@ -45,9 +46,13 @@ const routesArrayOfObject: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'personal-tax'
+        redirectTo: 'individual-tax'
       }
     ]
+  },
+  {
+    path: 'client-portal',
+    component: ClientPortalComponent,
   },
   {
     path: 'about-us',

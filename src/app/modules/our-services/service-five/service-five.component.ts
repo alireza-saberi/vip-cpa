@@ -23,15 +23,15 @@ export class ServiceFiveComponent implements OnInit {
       content: 'Here at VIP CPA, our team of accountants in downtown Montreal can put together' +
         ' forward-looking financial to give you an idea of how future budgets may look.' +
         ' This service will help set your business up for success.'
-    });
+    }, true);
     this.meta.addTag({
       name: 'keywords',
       content: 'Accountant, Downtown, Montreal, Financial Statements'
-    });
+    }, true);
     this.meta.addTag({
       name: 'robots',
       content: 'index, follow'
-    });
+    }, true);
     this.analytics.logEvent('select_content', {
       content_type: 'finanvial-statements',
       item_id: 5

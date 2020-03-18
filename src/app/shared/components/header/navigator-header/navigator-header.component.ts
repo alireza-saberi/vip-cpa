@@ -27,6 +27,7 @@ export class NavigatorHeaderComponent implements OnInit {
   isService: boolean;
   isAboutus: boolean;
   isContact: boolean;
+  isPortal: boolean;
   @Select(AppState.activeNav) navState$: Observable<string>;
   @ViewChild(MatMenuTrigger, { static: false}) trigger: MatMenuTrigger;
   constructor(private store: Store) { }
@@ -39,6 +40,13 @@ export class NavigatorHeaderComponent implements OnInit {
         this.isService = false;
         this.isContact = false;
         this.isAboutus = false;
+        this.isPortal = false;
+      } else if (navState === 'client') {
+        this.isHome = false;
+        this.isService = false;
+        this.isContact = false;
+        this.isAboutus = false;
+        this.isPortal = true;
       } else if (navState === 'service') {
         this.isHome = false;
         this.isService = true;

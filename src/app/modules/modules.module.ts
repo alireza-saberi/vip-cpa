@@ -21,6 +21,7 @@ import {TranslateModule} from '@ngx-translate/core';
 import { ServiceFourComponent } from './our-services/service-four/service-four.component';
 import { ServiceFiveComponent } from './our-services/service-five/service-five.component';
 import { RebrandingComponent } from './rebranding/rebranding.component';
+import { ClientPortalComponent } from './client-portal/client-portal.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -46,6 +47,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ServiceFourComponent,
     ServiceFiveComponent,
     RebrandingComponent,
+    ClientPortalComponent,
   ],
   imports: [
     CommonModule,

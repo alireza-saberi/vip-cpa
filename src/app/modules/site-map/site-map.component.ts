@@ -23,16 +23,16 @@ export class SiteMapComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content: 'Sitemap of VIP CPA'
-    });
+    }, true);
     this.meta.addTag({
       name: 'keywords',
       content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
         'Tax deduction, Payroll, Bookkeeping, Financial statement, Sitemap'
-    });
+    }, true);
     this.meta.addTag({
       name: 'robots',
       content: 'index, follow'
-    });
+    }, true);
     this.analytics.logEvent('SITEMAP_PAGE_event', {
       lang_browser: this.translate.getBrowserLang(),
       lang_user: this.translate.currentLang

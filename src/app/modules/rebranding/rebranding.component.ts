@@ -24,16 +24,16 @@ export class RebrandingComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content: 'About Rebranding of ATS Consulting to VIP CPA'
-    });
+    }, true);
     this.meta.addTag({
       name: 'keywords',
       content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
         'Tax deduction, Payroll, Bookkeeping, Financial statement'
-    });
+    }, true);
     this.meta.addTag({
       name: 'robots',
       content: 'index, follow'
-    });
+    }, true);
     this.analytics.logEvent('REBRABDING_PAGE_event', {
       lang_browser: this.translate.getBrowserLang(),
       lang_user: this.translate.currentLang

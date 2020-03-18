@@ -25,17 +25,16 @@ export class AboutUsComponent implements OnInit {
     this.meta.addTag({
       name: 'description',
       content: 'Founded in 2004 by Hasan Salhab (MBA) as ATS-consulting in downtown Montreal offers ' +
-        'top-notch tax and accounting services for businesses and individuals.'
-    });
+        'top-notch tax and accounting services for businesses and individuals.' }, true);
     this.meta.addTag({
       name: 'keywords',
       content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
         'Tax deduction, Payroll, Bookkeeping, Financial statement'
-    });
+    }, true);
     this.meta.addTag({
       name: 'robots',
       content: 'index, follow'
-    });
+    }, true);
     this.analytics.logEvent('ABOUT_US_PAGE_event', {
       lang_browser: this.translate.getBrowserLang(),
       lang_user: this.translate.currentLang

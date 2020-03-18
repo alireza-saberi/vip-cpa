@@ -23,15 +23,15 @@ export class ServiceFourComponent implements OnInit {
       content: 'VIP CPA in downtown Montreal will simplify payroll for small business.' +
         ' We create an easy to abide by and understand system for small business owners,' +
         ' taking into account the full range of remittance sources'
-    });
+    }, true);
     this.meta.addTag({
       name: 'keywords',
       content: 'Accountant, Downtown, Montreal, payroll'
-    });
+    },true);
     this.meta.addTag({
       name: 'robots',
       content: 'index, follow'
-    });
+    }, true);
     this.analytics.logEvent('select_content', {
       content_type: 'payroll',
       item_id: 4

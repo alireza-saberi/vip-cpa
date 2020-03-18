@@ -36,7 +36,7 @@ export class ContactUsComponent implements OnInit {
       name: 'keywords',
       content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
         'Tax deduction, Payroll, Bookkeeping, Financial statement, Contact us'
-    });
+    }, true);
     this.meta.addTag({
       name: 'robots',
       content: 'index, follow'

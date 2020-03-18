@@ -21,15 +21,15 @@ export class ServiceThreeComponent implements OnInit {
       name: 'description',
       content: 'VIP CPA in downtown Montreal mission is to provide reliable accounting' +
         ' and bookkeeping services'
-    });
+    }, true);
     this.meta.addTag({
       name: 'keywords',
       content: 'Accountant, Downtown, Montreal, bookkeeping'
-    });
+    }, true);
     this.meta.addTag({
       name: 'robots',
       content: 'index, follow'
-    });
+    }, true);
     this.analytics.logEvent('select_content', {
       content_type: 'bookkeeping',
       item_id: 3

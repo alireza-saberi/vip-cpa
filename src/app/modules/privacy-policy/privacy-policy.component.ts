@@ -24,16 +24,16 @@ export class PrivacyPolicyComponent implements OnInit {
       name: 'description',
       content: 'Privacy Policy of you at VIP CPA is important to us. ' +
         'This page provides detailed information of our privacy policy'
-    });
+    }, true);
     this.meta.addTag({
       name: 'keywords',
       content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
         'Tax deduction, Payroll, Bookkeeping, Financial statement, Privacy Policy'
-    });
+    }, true);
     this.meta.addTag({
       name: 'robots',
       content: 'index, follow'
-    });
+    }, true);
     this.analytics.logEvent('PRIVACY_PAGE_event', {
       lang_browser: this.translate.getBrowserLang(),
       lang_user: this.translate.currentLang

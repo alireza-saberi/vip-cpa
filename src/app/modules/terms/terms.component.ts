@@ -24,16 +24,16 @@ export class TermsComponent implements OnInit {
       name: 'description',
       content: 'Terms & Conditions plays an important part at VIP CPA with each client.' +
         ' Please kindly review them before visit'
-    });
+    }, true);
     this.meta.addTag({
       name: 'keywords',
       content: 'Accountant, Downtown, Montreal, Tax, Individual Taxation, Personal Tax, ' +
         'Tax deduction, Payroll, Bookkeeping, Financial statement, Terms'
-    });
+    }, true);
     this.meta.addTag({
       name: 'robots',
       content: 'index, follow'
-    });
+    }, true);
     this.analytics.logEvent('TERMS_PAGE_event', {
       lang_browser: this.translate.getBrowserLang(),
       lang_user: this.translate.currentLang
