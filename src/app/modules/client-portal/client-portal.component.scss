@@ -1,0 +1,16 @@
+@import './src/assets/style/variables';
+
+.client-container {
+  padding-top: 120px;
+
+  figure {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: $tablet-screen-max-width + 1) {
+
+  .client-container {
+    padding-top: 120px;
+  }
+}

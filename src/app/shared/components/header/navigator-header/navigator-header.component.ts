@@ -52,6 +52,7 @@ export class NavigatorHeaderComponent implements OnInit {
         this.isService = true;
         this.isContact = false;
         this.isAboutus = false;
+        this.isPortal = false;
       } else if (navState === 'contact') {
         this.isHome = false;
         this.isService = false;
@@ -62,11 +63,13 @@ export class NavigatorHeaderComponent implements OnInit {
         this.isService = false;
         this.isContact = false;
         this.isAboutus = true;
+        this.isPortal = false;
       } else {
         this.isHome = false;
         this.isService = false;
         this.isContact = false;
         this.isAboutus = false;
+        this.isPortal = false;
       }
     });
   }

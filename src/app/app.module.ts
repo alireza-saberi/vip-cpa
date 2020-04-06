@@ -23,6 +23,7 @@ import {QuicklinkModule} from 'ngx-quicklink';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {APIKeys} from './configs/keys';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import {APIKeys} from './configs/keys';
     NgxsModule.forRoot([AppState]),
     AngularFireModule.initializeApp(APIKeys.firebaseConfig),
     AngularFireAnalyticsModule,
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     SharedModule,
     CoreModule,
     ModulesModule,

@@ -22,6 +22,7 @@ import { ServiceFourComponent } from './our-services/service-four/service-four.c
 import { ServiceFiveComponent } from './our-services/service-five/service-five.component';
 import { RebrandingComponent } from './rebranding/rebranding.component';
 import { ClientPortalComponent } from './client-portal/client-portal.component';
+// import { AngularFirestoreModule } from '@angular/fire/firestore/firestore.module';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -58,7 +59,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
       apiKey: 'AIzaSyBp2XGtO263zgv4wHKFEqhNpPfT4p0XWWQ'
     }),
     RouterModule,
-    TranslateModule
+    TranslateModule,
+    // AngularFirestoreModule, // imports firebase/firestore, only needed for database features
   ],
   exports: [
     HomeComponent,

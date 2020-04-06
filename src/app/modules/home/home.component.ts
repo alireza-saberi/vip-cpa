@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
     direction: 'horizontal',
     slidesPerView: 1,
     keyboard: true,
-    mousewheel: true,
+    mousewheel: false,
     scrollbar: false,
     navigation: true,
     pagination: false
