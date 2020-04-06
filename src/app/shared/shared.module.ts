@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BangComponent } from './components/bang/bang.component';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 import {TranslateModule} from '@ngx-translate/core';
+import { ProblemComponent } from './components/dialogs/problem/problem.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {TranslateModule} from '@ngx-translate/core';
     SideNavigatorComponent,
     FooterComponent,
     BangComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    ProblemComponent
     ],
   imports: [
     CommonModule,
@@ -47,7 +49,10 @@ import {TranslateModule} from '@ngx-translate/core';
     SideNavigatorComponent,
     FooterComponent,
     BangComponent,
-    ScrollToTopComponent
-  ]
+    ScrollToTopComponent,
+    ProblemComponent
+  ],
+  entryComponents: [ProblemComponent],
+
 })
 export class SharedModule { }

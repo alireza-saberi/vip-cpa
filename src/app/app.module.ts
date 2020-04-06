@@ -12,6 +12,7 @@ import { CoreModule } from './core/core.module';
 import { ModulesModule } from './modules/modules.module';
 import { MatIconModule } from '@angular/material';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
@@ -43,6 +44,7 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     CoreModule,
     ModulesModule,
     MatIconModule,
+    MatDialogModule,
     AgmCoreModule.forRoot({
       apiKey: APIKeys.googleMapConfig.apiKey
     }),
